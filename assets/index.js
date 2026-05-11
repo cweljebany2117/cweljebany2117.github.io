@@ -104,12 +104,7 @@ document.querySelector(".go").addEventListener("click", () => {
     }
   });
 
-  if (empty.length != 0) {
-    empty[0].scrollIntoView();
-  } else {
-    forwardToId(params);
-  }
-});
+forwardToId(params);
 
 function isEmpty(value) {
   let pattern = /^\s*$/;
