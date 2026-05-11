@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'ticket';
+  src: url('ticket.ttf') format('truetype');
+}
+
+.container{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+Height: 40px;
+}
+.container2{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin-top: 100px; /* 50px top-bar + 60px marquee */
+}
+
+.container3{
+    width: 100%;
+Flex-direction: column;
+    display: flex;
+Margin-top:0px;
+Margin-left:0px;
+Margin-bottom:120px;
+Height: auto;
+Align-items: flex-start;
+}
+
+.img{
+    width: 30px;
+    height: 30px;
+    margin-top: 0px;
+}
+
+.text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;              /* zajmuje całą wolną przestrzeń */
+    text-align: center;   /* tekst na środku */
+}
+
+
+.title{
+Text-align: center;
+    font-weight: 600;
+    font-size: 17px;
+    color: #ffffff;
+    margin-top: 0px;
+}
+
+
+.main_title{
+Text-align: center;
+    font-size: 22px;
+    margin-top: 0px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.main1{
+Text-align: left;
+    font-size: 18px;
+    margin-top: 17xpx;
+Margin-left:12px;
+    margin-bottom: 5px;  
+    color: #ffffff;
+}
+.main2{
+Text-align: left;
+    font-size: 18px;
+    margin-top: 12px;
+Margin-left:12px;
+    margin-bottom: 5px;  
+    color: #ffffff;
+}
+
+.main3{
+Text-align: left;
+    font-size: 18px;
+    margin-top: 16px;
+Margin-left:12px;
+    margin-bottom: 2px;  
+    color: #ffffff;
+}
+.secondary1, date{
+Text-align: left;
+    font-size: 18px;
+    margin: 0;  
+    color: #ffffff;
+Margin-left:12px;
+    font-weight: bold;
+}
+.date{
+Text-align: left;
+    font-size: 18px;
+    margin: 0;  
+    color: #ffffff;
+Margin-left:12px;
+    font-weight: bold;
+}
+.number{
+Background-color: #1a1a1a;
+Text-align: left;
+margin-left: 125px;
+    font-size: 18px;
+    margin: 0;  
+    color: #ffffff;
+    font-weight: bold;
+Align-self: flex-start;
+Border: none;
+Outline: none;
+Box-shadow: none;
+Margin-left: -5px;
+}
+.green{
+Text-align: left;
+    font-size: 18px;
+    margin: 0;  
+    color: #5BA746;
+Margin-left:12px;
+    font-weight: bold;
+}
+
+.main_title, .title {
+    margin: 0;                /* usuwa marginesy domyślne */
+    line-height: 1.2;         /* kontroluje odstęp między wierszami */
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    border-bottom: 1px solid #343434;
+}
+
+.img:first-child {
+    margin-left: 15px;  /* odstęp od lewej krawędzi */
+}
+
+.img:last-child {
+    margin-right: 15px; /* odstęp od prawej krawędzi */
+}
+
+.bottom-bar {
+    position: fixed;
+    Bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    Border-top: 1px solid #343434;
+    Justify-content: center;
+}
+
+.marquee-container {
+    position: fixed;
+    top: 50px; /* dokładnie wysokość top-bar */
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.marquee-img {
+    position: absolute;
+    margin-top: 10px;
+    height:40px;  /* dopasowuje wysokość do kontenera */
+    right: -100%;  /* start poza ekranem po prawej */
+    animation: marquee 10s linear infinite; /* czas trwania, linia, powtarzanie */
+}
+
+  .responsive-image {
+    display: block;           /* usuwa ewentualne przerwy pod obrazem */
+    margin: 100px 60px 10px 60px;
+    margin-top: 10px;           /* 20px marginesu po lewej i prawej */
+    width: calc(100% - 120px); /* szerokość obrazu dopasowana do marginesów */
+    height: auto;    
+} 
+
+.fancy-btn {
+    background-color: #006EF5; /* kolor przycisku */
+    color: white;
+    border: none;
+    padding:17px 0;
+width: calc(100% - 50px); 
+    margin-left: 25px;  /* stały margines od lewej */
+    margin-right: 25px; 
+    margin-bottom: 25px; /*
+    cursor: pointer;
+
+
+    /* Zaokrąglenie tylko dwóch rogów */
+    border-top-left-radius: 5px;  /* lewy górny */
+    border-bottom-right-radius: 5px; /* prawy dolny */
+    font-size: 18px;
+    font-family: "ticket", sans-serif;
+    font-weight: bold;
+    /* Dodatkowo opcjonalnie: efekt hover */
+    transition: background 0.3s;
+}
+
+.fancy-btn:hover {
+    background-color: #0048A8;
+}
+
+@keyframes marquee {
+    0% {
+        right: 100%;   /* start poza ekranem po prawej */
+    }
+    100% {
+        right: -100%;    /* kończy poza ekranem po lewej */
+    }
+}
