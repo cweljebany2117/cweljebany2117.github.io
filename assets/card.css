@@ -240,13 +240,17 @@ body .bottom_bar{
     position: absolute;
     top: 5%;
     left: 7.5%;
+
     width: 35%;
+    height: 42%;
+
     border-radius: 15px;
-    height: 40%;
     background-color: white;
+
     background-position: center;
-background-size: cover;
+    background-size: cover; /* 🔥 KLUCZ */
     background-repeat: no-repeat;
+
     z-index: 0;
 }
 
