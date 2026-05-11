@@ -234,24 +234,17 @@ body .bottom_bar{
 }
 
 .id_own_image{
-    pointer-events: none;
-    filter: grayscale(1);
-    box-shadow: 0px 0px 5px white;
     position: absolute;
-    top: 5%;
-    left: 7.5%;
+    top: 20px;
+    left: 20px;
 
     width: 35%;
-    height: 42%;
+    aspect-ratio: 3 / 4;
 
     border-radius: 15px;
-    background-color: white;
 
     background-position: center;
-    background-size: cover; /* 🔥 KLUCZ */
-    background-repeat: no-repeat;
-
-    z-index: 0;
+    background-size: cover;
 }
 
 .action_arrow{
