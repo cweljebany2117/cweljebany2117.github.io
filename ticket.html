@@ -14,7 +14,20 @@
 <link rel="apple-touch-icon" href="icon.png">
 </head>
 <body>
-
+<div id="startupOverlay">
+    <div class="overlay-content">
+        <h2>Wpisz numer boczny</h2>
+        <input
+            type="text"
+            id="vehicleInput"
+            maxlength="4"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            autocomplete="off"
+            autofocus
+        >
+    </div>
+</div>
 <div class="container top-bar">
 <img class="img incline" src="assets/back.png" alt="Opis zdjęcia" style="width:30px;height:30px">
   <div class="text">
@@ -38,7 +51,7 @@
         <p class="main1">Bilet</p>
         <p class="secondary1">Jednorazowy I Normalny</p>
         <p class="main1">Nr boczny pojazdu:</p>
-        <p class="secondary1">98</p>
+	<p class="secondary1" id="vehicleNumber"></p>
         <p class="main1">Cena biletu</p>
         <p class="secondary1">3,80 PLN</p>
         <p class="main1">Numer kontrolny</p>
@@ -70,6 +83,19 @@
         // Podmieniamy zawartość elementu
         document.querySelector('.date').textContent = formatted;
     });
+
+const input = document.getElementById("vehicleInput");
+const overlay = document.getElementById("startupOverlay");
+const vehicleNumber = document.getElementById("vehicleNumber");
+
+input.addEventListener("input", function () {
+    this.value = this.value.replace(/\D/g, "");
+
+    if (this.value.length === 4) {
+vehicleNumber.textContent = Number(this.value);
+        overlay.style.display = "none";
+    }
+});
 </script>
 
     </div>
