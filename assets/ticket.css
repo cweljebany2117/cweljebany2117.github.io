@@ -65,7 +65,7 @@ Text-align: left;
     font-size: 19px;
     margin-top: 14px;
 Margin-left:12px;
-    margin-bottom: 0px;  
+    margin-bottom: -1px;  
     color: #ffffff;
 }
 
@@ -75,7 +75,6 @@ Text-align: left;
     margin: 0;  
     color: #ffffff;
 Margin-left:12px;
-    font-weight: bold;
 }
 .date{
 Text-align: left;
@@ -83,7 +82,6 @@ Text-align: left;
     margin: 0;  
     color: #ffffff;
 Margin-left:12px;
-    font-weight: bold;
 }
 .number{
 Background-color: #1a1a1a;
@@ -103,7 +101,7 @@ Margin-left: -5px;
 Text-align: left;
     font-size: 19px;
     margin: 0;  
-    color: #5EAC48;
+    color: #3fa840;
 Margin-left:12px;
     font-weight: bold;
 }
