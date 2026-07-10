@@ -64,16 +64,16 @@ Text-align: center;
 
 .main1{
 Text-align: left;
-    font-size: 18px;
+    font-size: 19px;
     margin-top: 17xpx;
 Margin-left:12px;
-    margin-bottom: 5px;  
+    margin-bottom: 1px;  
     color: #ffffff;
 }
 .main2{
 Text-align: left;
-    font-size: 18px;
-    margin-top: 12px;
+    font-size: 19px;
+    margin-top: 11px;
 Margin-left:12px;
     margin-bottom: 5px;  
     color: #ffffff;
@@ -81,8 +81,8 @@ Margin-left:12px;
 
 .main3{
 Text-align: left;
-    font-size: 18px;
-    margin-top: 16px;
+    font-size: 19px;
+    margin-top: 15px;
 Margin-left:12px;
     margin-bottom: 2px;  
     color: #ffffff;
