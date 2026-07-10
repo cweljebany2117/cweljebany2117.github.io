@@ -23,7 +23,7 @@ Height: 40px;
     width: 100%;
 Flex-direction: column;
     display: flex;
-Margin-top:-10px;
+Margin-top:-15px;
 Margin-left:0px;
 Margin-bottom:120px;
 Height: auto;
@@ -63,9 +63,9 @@ Text-align: center;
 .main1{
 Text-align: left;
     font-size: 19px;
-    margin-top: 14px;
+    margin-top: 13px;
 Margin-left:12px;
-    margin-bottom: -1px;  
+    margin-bottom: -2px;  
     color: #ffffff;
 }
 
@@ -103,7 +103,6 @@ Text-align: left;
     margin: 0;  
     color: #3fa840;
 Margin-left:12px;
-    font-weight: bold;
 }
 
 .main_title, .title {
