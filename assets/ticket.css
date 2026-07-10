@@ -59,6 +59,12 @@ Text-align: center;
     margin-top: 0px;
     color: #ffffff;
 }
+.login_title{
+Text-align: center;
+    font-size: 23px;
+    margin-top: 0px;
+    color: #ffffff;
+}
 
 .main1{
 Text-align: left;
@@ -105,7 +111,7 @@ Text-align: left;
 Margin-left:12px;
 }
 
-.main_title, .title {
+.main_title, .title, .login_title{
     margin: 0;                /* usuwa marginesy domyślne */
     line-height: 1.2;         /* kontroluje odstęp między wierszami */
 }
@@ -120,7 +126,7 @@ Margin-left:12px;
     display: flex;
     align-items: center;
     z-index: 9999;
-    border-bottom: 1px solid #343434;
+    border-bottom: 1px solid #4e4e4e;
 }
 
 .img:first-child {
@@ -222,8 +228,8 @@ width: calc(100% - 50px);
 
 .overlay-content h2 {
 Text-align: center;
-    font-size: 19px;
-    margin-top: 60px;
+    font-size: 21px;
+    margin-top: 75px;
 Margin-left:12px;
     margin-bottom: -2px;  
     color: #ffffff;
