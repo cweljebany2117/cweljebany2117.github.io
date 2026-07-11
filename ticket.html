@@ -14,8 +14,10 @@
 <link rel="apple-touch-icon" href="icon.png">
 </head>
 <body>
+<div id="loadingOverlay"></div>
 <div id="startupOverlay">
-    <div class="container top-bar">
+    <div class="container top-bar2">
+<img class="img incline" src="assets/x.png" alt="Opis zdjęcia" style="width:26px;height:26px">
         <div class="text">
             <p class="login_title">Logowanie</p>
         </div>
@@ -36,7 +38,7 @@
     <div class="pin-dot" id="dot3"></div>
     <div class="pin-dot" id="dot4"></div>
 </div>
-        <p class="main1">wersja h</p>
+        <p class="main1">wersja i</p>
     </div>
 
 </div>
@@ -103,20 +105,34 @@ const vehicleNumber = document.getElementById("vehicleNumber");
 input.focus();
 
 overlay.addEventListener("click", () => {
+window.addEventListener("DOMContentLoaded", () => {
     input.focus();
+    dots[0].classList.add("active");
+});
 });
 
 input.addEventListener("input", () => {
     input.value = input.value.replace(/\D/g, "");
 
-    dots.forEach((dot, index) => {
-        dot.classList.toggle("filled", index < input.value.length);
-    });
+dots.forEach((dot, index) => {
+    dot.classList.toggle("filled", index < input.value.length);
+    dot.classList.remove("active");
+});
 
-    if (input.value.length === 4) {
-        vehicleNumber.textContent = Number(input.value);
+if (input.value.length < 4) {
+    dots[input.value.length].classList.add("active");
+}
+
+if (input.value.length === 4) {
+    vehicleNumber.textContent = Number(input.value);
+
+    document.getElementById("loadingOverlay").style.display = "block";
+
+    setTimeout(() => {
         overlay.style.display = "none";
-    }
+        document.getElementById("loadingOverlay").style.display = "none";
+    }, 500);
+}
 });
 </script>
 

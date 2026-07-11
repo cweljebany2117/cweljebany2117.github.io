@@ -129,6 +129,20 @@ Margin-left:12px;
     border-bottom: 1px solid #474747;
 }
 
+.top-bar2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    border-bottom: 1px solid #474747;
+}
+
 .img:first-child {
     margin-left: 15px;  /* odstęp od lewej krawędzi */
 }
@@ -176,6 +190,12 @@ Margin-left:12px;
     width: calc(100% - 120px); /* szerokość obrazu dopasowana do marginesów */
     height: auto;    
 } 
+
+
+.top-bar2 img {
+    position: absolute;
+    left: 0px;
+}
 
 .fancy-btn {
     background-color: #006EF5; /* kolor przycisku */
@@ -265,4 +285,16 @@ Margin-left:12px;
     content: "●";
     color: white;
     font-size: 40px;
+}
+
+.pin-dot.active {
+    border-color: #006EF5;
+}
+
+#loadingOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 100000;
+    display: none;
 }
