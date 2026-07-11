@@ -25,7 +25,7 @@ Flex-direction: column;
     display: flex;
 Margin-top:-15px;
 Margin-left:0px;
-Margin-bottom:120px;
+Margin-bottom:140px;
 Height: auto;
 Align-items: flex-start;
 }
@@ -126,7 +126,7 @@ Margin-left:12px;
     display: flex;
     align-items: center;
     z-index: 9999;
-    border-bottom: 1px solid #4e4e4e;
+    border-bottom: 1px solid #474747;
 }
 
 .img:first-child {
@@ -251,9 +251,9 @@ Margin-left:12px;
 }
 
 .pin-dot {
-    width: 55px;
+    width: 47px;
     height: 65px;
-    border: 2px solid #555;
+    border: 2px solid #4e4e4e;
     border-radius: 5px;
     background: #1a1a1a;
     display: flex;
@@ -264,5 +264,5 @@ Margin-left:12px;
 .pin-dot.filled::before {
     content: "●";
     color: white;
-    font-size: 22px;
+    font-size: 40px;
 }
