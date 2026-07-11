@@ -23,13 +23,20 @@
 
     <div class="overlay-content">
         <h2>Podaj PIN, aby zalogować się do aplikacji</h2>
+<input
+    id="vehicleInput"
+    type="tel"
+    inputmode="numeric"
+    maxlength="4"
+    autocomplete="off"
+>
 <div class="pin-boxes">
-    <input maxlength="1" class="pin">
-    <input maxlength="1" class="pin">
-    <input maxlength="1" class="pin">
-    <input maxlength="1" class="pin">
+    <div class="pin-dot" id="dot1"></div>
+    <div class="pin-dot" id="dot2"></div>
+    <div class="pin-dot" id="dot3"></div>
+    <div class="pin-dot" id="dot4"></div>
 </div>
-        <p class="main1">wersja f</p>
+        <p class="main1">wersja g</p>
     </div>
 
 </div>
@@ -88,32 +95,28 @@
         document.querySelector('.date').textContent = formatted;
     });
 
-const inputs = document.querySelectorAll(".pin");
+const input = document.getElementById("vehicleInput");
+const dots = document.querySelectorAll(".pin-dot");
 const overlay = document.getElementById("startupOverlay");
 const vehicleNumber = document.getElementById("vehicleNumber");
 
-inputs[0].focus();
+input.focus();
 
-inputs.forEach((input, index) => {
-    input.addEventListener("input", () => {
-        input.value = input.value.replace(/\D/g, "");
+overlay.addEventListener("click", () => {
+    input.focus();
+});
 
-        if (input.value && index < inputs.length - 1) {
-            inputs[index + 1].focus();
-        }
+input.addEventListener("input", () => {
+    input.value = input.value.replace(/\D/g, "");
 
-        if ([...inputs].every(i => i.value.length === 1)) {
-            const number = Number([...inputs].map(i => i.value).join(""));
-            vehicleNumber.textContent = number;
-            overlay.style.display = "none";
-        }
+    dots.forEach((dot, index) => {
+        dot.classList.toggle("filled", index < input.value.length);
     });
 
-    input.addEventListener("keydown", e => {
-        if (e.key === "Backspace" && !input.value && index > 0) {
-            inputs[index - 1].focus();
-        }
-    });
+    if (input.value.length === 4) {
+        vehicleNumber.textContent = Number(input.value);
+        overlay.style.display = "none";
+    }
 });
 </script>
 
