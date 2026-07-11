@@ -38,7 +38,7 @@
     <div class="pin-dot" id="dot3"></div>
     <div class="pin-dot" id="dot4"></div>
 </div>
-        <p class="main1">wersja i</p>
+        <p class="main1">wersja j</p>
     </div>
 
 </div>
@@ -103,12 +103,10 @@ const overlay = document.getElementById("startupOverlay");
 const vehicleNumber = document.getElementById("vehicleNumber");
 
 input.focus();
+dots[0].classList.add("active");
 
 overlay.addEventListener("click", () => {
-window.addEventListener("DOMContentLoaded", () => {
     input.focus();
-    dots[0].classList.add("active");
-});
 });
 
 input.addEventListener("input", () => {
